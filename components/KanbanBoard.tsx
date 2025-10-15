@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 
-// --- Mock API ---
-// This simulates fetching data and making updates to a server.
 const mockApi = {
   fetchBoard: async () => ({
     'col-1': { id: 'col-1', title: 'To Do', tasks: [{ id: 'task-1', content: 'Analyze user feedback' }] },
@@ -23,10 +21,6 @@ const mockApi = {
   },
 };
 
-/**
- * Renders a full Kanban-style task board.
- * Fetches board data and allows for adding and moving tasks between columns.
- */
 export const KanbanBoard = () => {
   const [board, setBoard] = useState<any>(null);
   const [draggedItem, setDraggedItem] = useState(null);
